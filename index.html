@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker with Pomodoro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Task Tracker with Pomodoro</h1>
+  </header>
+
+  <main>
+      <!-- Task Form -->
+      <section id="task-form-section">
+        <h2>Create a Task</h2>
+        <form id="task-form">
+          <input type="text" id="task-title" placeholder="Task Title" required />
+          <textarea id="task-description" placeholder="Task Description"></textarea>
+          <select id="task-priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          <input type="date" id="task-deadline" required />
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+        <label>
+          <!-- Фильтры -->
+          <label>Filter by Priority:
+            <select id="priority-filter">
+              <option value="">Filter by Priority</option>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </label>
+          
+          <label>Filter by Status:
+            <select id="status-filter">
+              <option value="">Filter by Status</option>
+              <option value="Completed">Completed</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </label>
+
+<!-- Список задач -->
+<ul id="task-list"></ul>
+
+<!-- Таймер -->
+<div id="timer-display"></div>
+<button id="start-timer">Start Timer</button>
+<button id="reset-timer">Reset Timer</button>
+
+<!-- Диаграмма статистики -->
+<canvas id="tasks-chart"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
